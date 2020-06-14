@@ -11,12 +11,37 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/senate',
+    name: 'Congress Senate',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/CongressSenate.vue')
+  },
+  {
+    path: '/house',
+    name: 'Congress House',
+    component: () => import(  '../views/CongressHouse.vue')
+  },
+  {
+    path: '/attendancesenate',
+    name: 'Attendance Senate',
+    component: () => import(  '../views/AttendanceSenate.vue')
+  },
+  {
+    path: '/attendancehouse',
+    name: 'Attendance House',
+    component: () => import(  '../views/AttendanceHouse.vue')
+  },
+  {
+    path: '/loyaltysenate',
+    name: 'Loyalty Senate',
+    component: () => import(  '../views/LoyaltySenate.vue')
+  },
+  {
+    path: '/loyaltyhouse',
+    name: 'Loyalty House',
+    component: () => import(  '../views/LoyaltyHouse.vue')
   }
 ]
 
